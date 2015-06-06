@@ -1,14 +1,14 @@
 .steady {
 	/* Positioning */
 	position: absolute;
-	top: 21.5px;
-	left: 21.5px;
+	top: 19.4px;
+	left: 19.4px;
 	z-index: 1;
 	
 	/* Display & Box Model */
-	width: 12px;
-	height: 12px;
-	border-radius: 13px;
+	width: 17px;
+	height: 17px;
+	border-radius: 20px;
 	border: 0;
 
 	/* Color */
@@ -19,18 +19,26 @@
 	font-family: roboto light, arial, sans-serif;
 	font-size: .5em;
 	text-align: center;
+
+	/* Other */
+	cursor: pointer;
+	cursor: hand;
 }
 
 .pulsate {
 	/* Display & Box Model */
 	width: 40px;
 	height: 40px;
-	border-radius: 40px;
+	border-radius: 50px;
 	border: 0;
 
 	/* Color */
-	background-color: pink;
-	opacity: 0;
+	background-color: lightpink;
+	opacity: 0; /* Switch to 1 for editing purposes */
+
+	/* Other */
+	cursor: pointer;
+	cursor: hand;
 }
 
 .steady:hover ~ .pulsate, .pulsate:hover {
@@ -39,20 +47,23 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 40px;
-	border: 0;
+	border: 0; /* 1px solid pink */
 	opacity: 1;
 
 	/* Color */
-	background-color: pink;
+	background-color: lightpink;
 	
 	/* Animation */
-	-webkit-animation: pulsate 700ms ease-out;
+	-webkit-animation: pulsate 800ms ease-out;
+	-moz-animation: pulsate 800ms ease-out;
 	-webkit-animation-iteration-count: infinite;
-	opacity: 0.0;	
+	-moz-animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes pulsate {
-	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+	0% {-webkit-transform: scale(0.1, 0.1); transform: scale(0.1, 01.); opacity: 0.0;}
 	50% {opacity: 1.0;}
-	100% {-webkit-transform: scale(1.3, 1.3); opacity: 0.0;}
+	100% {-webkit-transform: scale(1.3, 1.3); transform: scale(1.3, 1.3); opacity: 0.0;}
 }
+
+/* Issue: Cursor flickers and :hover does not respond when on pulsate class*/
