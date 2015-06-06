@@ -47,11 +47,11 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 40px;
-	border: 0; /* 1px solid pink */
+	border: 1px solid lightpink;
 	opacity: 1;
 
 	/* Color */
-	background-color: lightpink;
+	background-color: rgba(0,0,0,0);
 	
 	/* Animation */
 	-webkit-animation: pulsate 800ms ease-out;
