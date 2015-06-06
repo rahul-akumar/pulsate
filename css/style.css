@@ -1,0 +1,58 @@
+.steady {
+	/* Positioning */
+	position: absolute;
+	top: 21.5px;
+	left: 21.5px;
+	z-index: 1;
+	
+	/* Display & Box Model */
+	width: 12px;
+	height: 12px;
+	border-radius: 13px;
+	border: 0;
+
+	/* Color */
+	background-color: deeppink;
+	color: white;
+	
+	/* Type */
+	font-family: roboto light, arial, sans-serif;
+	font-size: .5em;
+	text-align: center;
+}
+
+.pulsate {
+	/* Display & Box Model */
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 0;
+
+	/* Color */
+	background-color: pink;
+	opacity: 0;
+}
+
+.steady:hover ~ .pulsate, .pulsate:hover {
+	
+	/* Display & Box Model */
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	border: 0;
+	opacity: 1;
+
+	/* Color */
+	background-color: pink;
+	
+	/* Animation */
+	-webkit-animation: pulsate 700ms ease-out;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0.0;	
+}
+
+@-webkit-keyframes pulsate {
+	0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+	50% {opacity: 1.0;}
+	100% {-webkit-transform: scale(1.3, 1.3); opacity: 0.0;}
+}
