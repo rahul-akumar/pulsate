@@ -37,6 +37,7 @@
 	opacity: 0; /* Switch to 1 for editing purposes */
 
 	/* Other */
+	pointer-events: none;
 	cursor: pointer;
 	cursor: hand;
 }
@@ -49,7 +50,7 @@
 	border-radius: 40px;
 	border: 0; /* 1px solid pink */
 	opacity: 1;
-
+	
 	/* Color */
 	background-color: lightpink;
 	
